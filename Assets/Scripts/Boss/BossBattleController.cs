@@ -37,6 +37,7 @@ public class BossBattleController : MonoBehaviour
         if (smokeEffect != null)
         {
             Instantiate(smokeEffect, bossObject.transform.position, bossObject.transform.rotation);
+             AudioManger.instance.PlaySFX(1);
         }
 
         shotCounter = timeBetweenShots1;
@@ -85,6 +86,7 @@ public class BossBattleController : MonoBehaviour
         if(smokeEffect != null)
         {
             Instantiate(smokeEffect, bossObject.transform.position, bossObject.transform.rotation);
+             AudioManger.instance.PlaySFX(1);
         }
 
         yield return new WaitForSeconds(waitBeforeSpawn);
@@ -108,6 +110,7 @@ public class BossBattleController : MonoBehaviour
         if (smokeEffect != null)
         {
             Instantiate(smokeEffect, bossObject.transform.position, bossObject.transform.rotation);
+             AudioManger.instance.PlaySFX(1);
         }
     }
 
@@ -128,10 +131,12 @@ public class BossBattleController : MonoBehaviour
     IEnumerator EndBattleCo()
     {
         bossObject.SetActive(false);
+        AudioManger.instance.PlaySFX(2);
         
         if (smokeEffect != null)
         {
             Instantiate(smokeEffect, bossObject.transform.position, bossObject.transform.rotation);
+             AudioManger.instance.PlaySFX(1);
         }
 
         PlayerPrefs.SetInt(areaToUnlock + "_unlocked", 1);
