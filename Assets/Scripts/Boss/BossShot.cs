@@ -13,6 +13,7 @@ public class BossShot : MonoBehaviour
     void Start()
     {
         transform.LookAt(PlayerController.instance.transform.position + Vector3.up);
+         AudioManger.instance.PlaySFXPitched(0);
     }
 
     // Update is called once per frame
