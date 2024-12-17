@@ -95,6 +95,8 @@ public class PlayerController : MonoBehaviour
                     moveAmount.y = jumpForce;
 
                     jumpParticle.SetActive(true);
+
+                    AudioManger.instance.PlaySFXPitched(11);
                 }
             }
 
