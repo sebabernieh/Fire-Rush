@@ -10,7 +10,7 @@ public class AudioManagerLoader : MonoBehaviour
     {
         if(AudioManger.instance == null)
         {
-            Instantiate(theAM);
+            Instantiate(theAM).SetupInstance();
         }
     }
 
