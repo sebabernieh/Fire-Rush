@@ -45,6 +45,8 @@ public class Crystal : MonoBehaviour
 
             PlayerPrefs.SetInt(uniqueID, 1);
 
+             AudioManger.instance.PlaySFX(5);
+
             Destroy(gameObject);
         }
     }
