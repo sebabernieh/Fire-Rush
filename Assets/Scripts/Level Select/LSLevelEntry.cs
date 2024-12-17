@@ -85,6 +85,8 @@ public class LSLevelEntry : MonoBehaviour
         FindObjectOfType<PlayerController>().stopMoving = true;
         UIController.instance.FadeToBlack();
 
+        AudioManger.instance.PlaySFX(9);
+
         yield return new WaitForSeconds(2f);
 
         SceneManager.LoadScene(levelName);
