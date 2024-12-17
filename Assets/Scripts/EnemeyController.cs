@@ -66,7 +66,7 @@ public class EnemeyController : MonoBehaviour
                 {
                     Instantiate(deathEffect, transform.position, Quaternion.identity);
                 }
-
+                 AudioManger.instance.PlaySFX(6);
                 Destroy(gameObject);
             }
         }
