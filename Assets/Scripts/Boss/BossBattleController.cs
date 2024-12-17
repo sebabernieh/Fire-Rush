@@ -40,6 +40,8 @@ public class BossBattleController : MonoBehaviour
         }
 
         shotCounter = timeBetweenShots1;
+
+         AudioManager.instance.PlayMusic(0);
     }
 
     // Update is called once per frame
