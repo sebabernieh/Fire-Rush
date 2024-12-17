@@ -16,6 +16,7 @@ public class Coin : MonoBehaviour
             {
                 Instantiate(pickupEffect, transform.position, Quaternion.identity);
             }
+             AudioManger.instance.PlaySFXPitched(4);
 
             Destroy(gameObject);
         }
