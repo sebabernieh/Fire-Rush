@@ -30,6 +30,7 @@ public class Checkpoint : MonoBehaviour
                 }
 
                 anim.SetBool("active", true);
+                AudioManger.instance.PlaySFX(3);
             }
         }
     }
