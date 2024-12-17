@@ -20,6 +20,7 @@ public class MainMenu : MonoBehaviour
                 continueButton.SetActive(true);
             }
         }
+        AudioManager.instance.PlayMusic(0);
     }
 
     // Update is called once per frame
