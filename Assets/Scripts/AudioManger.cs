@@ -38,4 +38,10 @@ public class AudioManger : MonoBehaviour
             track.Stop();
         }
     }
+
+    public void PlaySFX(int soundToPlay)
+    {
+        sfx[soundToPlay].Stop();
+        sfx[soundToPlay].Play();
+    }
 }
