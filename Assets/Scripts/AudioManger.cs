@@ -6,15 +6,21 @@ public class AudioManger : MonoBehaviour
 {
     public static AudioManger instance;
 
-    private void Awake()
+   private void Awake()
     {
-        if (instance == null)
+        SetupInstance();
+    }
+
+    public void SetupInstance()
+    {
+    if (instance == null)
         {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        } else
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+        }
+        else
         {
-            Destroy(gameObject);
+             Destroy(gameObject);
         }
     }
 
