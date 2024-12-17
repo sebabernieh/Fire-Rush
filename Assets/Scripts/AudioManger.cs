@@ -41,7 +41,17 @@ public class AudioManger : MonoBehaviour
 
     public void PlaySFX(int soundToPlay)
     {
-        sfx[soundToPlay].Stop();
-        sfx[soundToPlay].Play();
+        if (soundToPlay < sfx.Length)
+        {
+            sfx[soundToPlay].Stop();
+            sfx[soundToPlay].Play();
+        }
     }
+
+    public void PlaySFXPitched(int soundToPlay)
+    {
+        sfx[soundToPlay].pitch = Random.Range(.8f, 1.2f);
+        PlaySFX(soundToPlay);
+    }
+
 }
