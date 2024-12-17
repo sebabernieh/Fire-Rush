@@ -23,4 +23,9 @@ public class LevelSelectController : MonoBehaviour
     }
     public GameObject levelInfoBox;
     public TMP_Text levelText, actionText;
+
+    private void Start()
+    {
+        AudioManger.instance.PlayMusic(1);
+    }
 }
