@@ -88,6 +88,8 @@ public class LevelManager : MonoBehaviour
 {
     player.gameObject.SetActive(false);
     UIController.instance.FadeToBlack();
+    
+     AudioManger.instance.PlaySFX(10);
 
     yield return new WaitForSeconds(waitBeforeRespawning);
 
