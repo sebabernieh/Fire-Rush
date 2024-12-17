@@ -67,6 +67,9 @@ public class PlayerHealthController : MonoBehaviour
             if (currentHealth <= 0)
             {
                 LevelManager.instance.Respawn();
+            } else
+            {
+                 AudioManger.instance.PlaySFX(12);
             }
             UIController.instance.UpdateHealthDisplay(currentHealth);
         }
