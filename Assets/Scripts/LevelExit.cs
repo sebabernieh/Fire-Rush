@@ -30,6 +30,10 @@ public class LevelExit : MonoBehaviour
                 LevelManager.instance.EndLevel(levelToLoad);
 
                 FindObjectOfType<CameraController>().endCamPos = camPos;
+
+                 AudioManger.instance.PlayMusic(4);
+
+                  AudioManger.instance.PlaySFX(8);
             }
         }
     }
