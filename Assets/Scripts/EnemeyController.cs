@@ -230,6 +230,7 @@ public class EnemeyController : MonoBehaviour
 
             dieinCounter = waitBeforeDieing;
 
+             AudioManger.instance.PlaySFX(7);
             thePlayer.Bounce();
         }
 
