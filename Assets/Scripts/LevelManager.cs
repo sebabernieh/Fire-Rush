@@ -37,6 +37,8 @@ public class LevelManager : MonoBehaviour
     [HideInInspector]
     public bool levelComplete;
 
+    public bool reloadOnRespawn;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -83,11 +85,18 @@ public class LevelManager : MonoBehaviour
     }
 
     public IEnumerator RespawnCo()
-    {
-        player.gameObject.SetActive(false);
-        UIController.instance.FadeToBlack();
+{
+    player.gameObject.SetActive(false);
+    UIController.instance.FadeToBlack();
 
-        yield return new WaitForSeconds(waitBeforeRespawning);
+    yield return new WaitForSeconds(waitBeforeRespawning);
+
+    if (reloadOnRespawn)
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    else
+    {
 
         player.transform.position = respawnPoint;
 
@@ -101,6 +110,7 @@ public class LevelManager : MonoBehaviour
 
         PlayerHealthController.instance.FillHealth();
     }
+}
 
 
     public void GetCoin()
