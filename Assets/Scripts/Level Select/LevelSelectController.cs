@@ -10,17 +10,9 @@ public class LevelSelectController : MonoBehaviour
 
     private void Awake()
     {
-        // Singleton pattern
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject); // Optional: Keep the controller between scenes
-        }
-        else
-        {
-            Destroy(gameObject); // Prevent duplicate instances
-        }
+       instance = this;
     }
+
     public GameObject levelInfoBox;
     public TMP_Text levelText, actionText;
 
