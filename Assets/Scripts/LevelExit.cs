@@ -15,7 +15,7 @@ public class LevelExit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        AudioManger.instance.PlayMusic(2);
     }
 
     private void OnTriggerEnter(Collider other)
